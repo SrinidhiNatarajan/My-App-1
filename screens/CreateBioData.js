@@ -52,7 +52,7 @@ export default class CreateBioData extends Component {
     super(props);
     this.state = {
       fontsLoaded: false,
-      previewImage: "image_1",
+      previewImage: "",
       dropdownHeight: 40,
       name:"",
       experience:"",
@@ -82,7 +82,8 @@ export default class CreateBioData extends Component {
       this.state.category && 
       this.state.hobbies && 
       this.state.gender && 
-      this.state.country
+      this.state.country &&
+      this.state.previewImage
     ) {
       var d = new Date();
       let bioData = {
