@@ -86,7 +86,7 @@ export default class LoginScreen extends Component {
             source={require("../assets/Natarajar.jpg")}
             style={styles.backgroundImage}
           >
-            <Text style={styles.appTitleText}>Music</Text>
+            <Text style={styles.appTitleText}>My Dancing Journey</Text>
             <Image source={appIcon} style={styles.appIcon} />
 
             <TextInput
