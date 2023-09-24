@@ -91,11 +91,11 @@ onValue(starCountRef, (snapshot) => {
     if (this.state.fontsLoaded) {
       SplashScreen.hideAsync();
       let images = {
-        image_1: require("../assets/1.webp"),
-        image_2: require("../assets/2.jpeg"),
-        image_3: require("../assets/3.png"),
-        image_4: require("../assets/4.jpg"),
-        image_5: require("../assets/5.jpg"),
+        image_1: require("../assets/2.jpeg"),
+        image_2: require("../assets/3.png"),
+        image_3: require("../assets/4.jpg"),
+        image_4: require("../assets/5.jpg"),
+        image_5: require("../assets/6.jpg"),
       };
       return (
         <TouchableOpacity
@@ -127,7 +127,7 @@ onValue(starCountRef, (snapshot) => {
                       : styles.bioTitleText
                   }
                 >
-                  {this.props.bio.value.bioData.title}
+                  Name: {this.props.bio.value.bioData.name}
                 </Text>
                 <Text
                   style={
@@ -136,7 +136,7 @@ onValue(starCountRef, (snapshot) => {
                       : styles.bioAuthorText
                   }
                 >
-                  {this.props.bio.value.bioData.bio}
+                 Experience: {this.props.bio.value.bioData.experience}
                 </Text>
                 <Text
                   style={
@@ -145,8 +145,48 @@ onValue(starCountRef, (snapshot) => {
                       : styles.descriptionText
                   }
                 >
-                  {this.props.bio.value.bioData.moral}
+                 Age: {this.props.bio.value.bioData.age}
                 </Text>
+                <Text
+                  style={
+                    this.state.light_theme
+                      ? styles.descriptionTextLight
+                      : styles.descriptionText
+                  }
+                >
+                 Category: {this.props.bio.value.bioData.category}
+                </Text>
+
+                <Text
+                  style={
+                    this.state.light_theme
+                      ? styles.descriptionTextLight
+                      : styles.descriptionText
+                  }
+                >
+                 Gender: {this.props.bio.value.bioData.gender}
+                </Text>
+
+                <Text
+                  style={
+                    this.state.light_theme
+                      ? styles.descriptionTextLight
+                      : styles.descriptionText
+                  }
+                >
+                Hobbies: {this.props.bio.value.bioData.hobbies}
+                </Text>
+
+                <Text
+                  style={
+                    this.state.light_theme
+                      ? styles.descriptionTextLight
+                      : styles.descriptionText
+                  }
+                >
+                 Country: {this.props.bio.value.bioData.country}
+                </Text>
+
               </View>
             </View>
 
