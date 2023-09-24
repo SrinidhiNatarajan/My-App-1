@@ -7,6 +7,8 @@ import firebase from "firebase/app";
 import CustomSideBarMenu from "../screens/CustomSideBarMenu";
 import { getDatabase, ref, onValue } from "firebase/database";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import Information from "../screens/Info";
+import Facts from "../screens/Facts";
 var uid=""
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
@@ -63,13 +65,23 @@ const starCountRef = ref(db, "/users/" + uid);
         }}
       >
         <Drawer.Screen
-          name="MyHome"
+          name="My Home"
           component={StackNavigator}
           options={{ unmountOnBlur: true }}
         />
         <Drawer.Screen
-          name="profile"
+          name="Profile"
           component={Profile}
+          options={{ unmountOnBlur: true }}
+        />
+        <Drawer.Screen
+          name="Facts"
+          component={Facts}
+          options={{ unmountOnBlur: true }}
+        />
+        <Drawer.Screen
+          name="Information"
+          component={Information}
           options={{ unmountOnBlur: true }}
         />
       </Drawer.Navigator>
